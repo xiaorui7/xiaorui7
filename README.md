@@ -20,6 +20,8 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 
 **Languages**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=111111)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111)
 
@@ -40,6 +42,7 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=numba&logoColor=white)
 
 **Systems & Tools**  
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=111111)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
@@ -58,6 +61,16 @@ End-to-end platform that converts plantar-pressure and foot-mounted IMU recordin
 - Added defensive upload handling, deterministic synthetic fixtures, integration and end-to-end tests, and a reproducible five-service Docker Compose environment.
 
 `Python` `FastAPI` `PostgreSQL` `Redis/RQ` `React` `TypeScript` `Docker` `pytest`
+
+### [RISC-V Storage Systems Lab](https://github.com/xiaorui7/riscv-storage-lab)
+
+C and RISC-V teaching operating system running under QEMU, focused on storage correctness, reproducible builds, and measurable block-cache behavior.
+
+- Built source-generated KTFS images, an out-of-source build, a bounded Python test runner, and a matching GitHub Actions workflow.
+- Improved cache consistency and failure handling across dirty reads, partial transfers, victim replacement, write retries, and referenced-block flushing.
+- Added 20 QEMU storage regression cases, per-cache instrumentation, and deterministic workloads spanning KTFS, the cache layer, I/O abstraction, and VirtIO.
+
+`C` `RISC-V Assembly` `Linux` `QEMU` `VirtIO` `Python` `Make` `GitHub Actions`
 
 ### [RAE Feature Compression Benchmark](https://github.com/xiaorui7/rae-feature-compression-benchmark)
 
