@@ -82,15 +82,15 @@ Config-driven toolkit for compressing high-dimensional vision representations an
 
 `Python` `PyTorch` `NumPy` `scikit-learn` `matplotlib` `pytest`
 
-### [Accelerated FMCW-SAR Imaging](https://github.com/xiaorui7/accelerated-fmcw-sar)
+### [High-Performance Telemetry Processing Engine](https://github.com/xiaorui7/high-performance-telemetry-engine)
 
-CPU-based numerical pipeline for simulating FMCW radar sweeps, applying FFT range processing, and reconstructing synthetic-aperture radar images.
+High-performance processing engine for validating, aligning, and analyzing heterogeneous industrial-equipment telemetry with bounded memory and reproducible benchmarks.
 
-- Implemented scalar-reference, chunked NumPy, and parallel Numba back-projection paths with agreement and independent numerical checks.
-- Built validated YAML/NPZ interfaces, CLI workflows, controlled motion-error experiments, and isolated-process runtime and memory benchmarks.
-- Added unit and integration tests plus cross-platform GitHub Actions coverage for Python 3.11 and 3.13.
+- Built a CLI pipeline that ingests public UCI and deterministic synthetic cycles, validates malformed data, aligns multi-rate sensors, applies configurable diagnostic rules, and writes CSV/JSON artifacts.
+- Designed interchangeable reference Python, vectorized NumPy, and parallel Numba backends; four-thread Numba reached 21,789 cycles/second and 27.34× reference throughput with ≤4.62e-14 maximum absolute error.
+- Measured the complete file-to-output path at 391.5 cycles/second across 1,000 five-channel cycles; verified batch-memory trade-offs with 41 tests, 78% coverage, and Windows/Linux CI.
 
-`Python` `NumPy` `SciPy` `Numba` `PyYAML` `pytest`
+`Python` `NumPy` `Numba` `PyYAML` `pytest` `GitHub Actions`
 
 ## Education
 
