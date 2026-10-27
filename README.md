@@ -4,9 +4,8 @@
 
 Seeking Summer 2027 Software Engineering / Software Development internships in the United States. Based in New York City.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
-[![Resume](https://img.shields.io/badge/Resume-View-4B5563?style=flat&logo=readthedocs&logoColor=white)](YOUR_RESUME_URL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/xiaoruizhang12345)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:xz3569@columbia.edu)
 
 ## About Me
 
@@ -105,4 +104,4 @@ Engineering background through the ZJU-UIUC Institute
 
 ## Connect
 
-[LinkedIn](YOUR_LINKEDIN_URL) · [Email](mailto:YOUR_EMAIL) · [Resume](YOUR_RESUME_URL)
+[LinkedIn](https://linkedin.com/in/xiaoruizhang12345) · [Email](mailto:xz3569@columbia.edu)
