@@ -18,6 +18,7 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 ## Tech Stack
 
 **Languages**  
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=111111)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=cplusplus&logoColor=white)
@@ -25,6 +26,7 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111)
 
 **Backend & Web**  
+![gRPC](https://img.shields.io/badge/gRPC-244C5A?style=flat)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
@@ -37,10 +39,11 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
 ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=numba&logoColor=white)
 
 **Systems & Tools**  
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=111111)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
@@ -51,15 +54,25 @@ Seeking Summer 2027 Software Engineering / Software Development internships in t
 
 ## Featured Projects
 
+### [RAE — Feature Compression & Sharded Retrieval](https://github.com/xiaorui7/rae-feature-compression-benchmark)
+
+Python feature-compression pipeline and Go retrieval service with replicated gRPC shards and an HTTP coordinator. Offline representations come from the official frozen RAE encoder.
+
+- Implemented exact cosine search across shards with deterministic global top-k merging and checksum-verified vector exports.
+- Added deadline propagation, bounded retries, explicit partial-result handling, health checks, Prometheus metrics, and replica routing on local Kubernetes.
+- Verified 72,000 query checks with zero ID mismatches; measured 1,026 QPS at 31 ms p99 on a local synthetic 50k × 64 FP32 workload with two shards and two replicas each.
+
+`Go` `gRPC` `Python` `PyTorch` `Kubernetes` `Docker` `Prometheus`
+
 ### [StepWise — Wearable Sensor Analytics Platform](https://github.com/xiaorui7/StepWise-Wearable-Sensor-Analytics-Platform)
 
-End-to-end platform that converts plantar-pressure and foot-mounted IMU recordings into structured gait-analysis results, charts, and non-diagnostic HTML reports.
+Asynchronous gait-analysis platform that processes wearable sensor recordings and delivers reports through a FastAPI backend and React dashboard.
 
-- Implemented a modular pipeline for parsing, calibration, contact detection, stance segmentation, feature extraction, data-quality checks, and explainable rule evaluation.
-- Built an asynchronous FastAPI backend with PostgreSQL-backed job state, Redis/RQ workers, persistent artifacts, a React dashboard, and an optional WeChat Mini Program client.
-- Added defensive upload handling, deterministic synthetic fixtures, integration and end-to-end tests, and a reproducible five-service Docker Compose environment.
+- Implemented PostgreSQL-backed job state, Redis/RQ workers, idempotent submissions, bounded retries, and execution-token checks that prevent stale workers from publishing results.
+- Added S3-compatible MinIO storage with checksum-verified artifacts; deployed two API replicas and two workers on a local kind Kubernetes cluster without shared application filesystems.
+- Passed 106 tests with no skips against PostgreSQL, Redis/RQ, and MinIO; verified interrupted publication and cross-replica report consistency through integration and local cluster checks.
 
-`Python` `FastAPI` `PostgreSQL` `Redis/RQ` `React` `TypeScript` `Docker` `pytest`
+`Python` `FastAPI` `PostgreSQL` `Redis/RQ` `React` `Kubernetes` `MinIO` `Docker` `pytest`
 
 ### [RISC-V Storage Systems Lab](https://github.com/xiaorui7/riscv-storage-lab)
 
@@ -69,17 +82,7 @@ C and RISC-V teaching operating system running under QEMU, focused on storage co
 - Improved cache consistency and failure handling across dirty reads, partial transfers, victim replacement, write retries, and referenced-block flushing.
 - Added 20 QEMU storage regression cases, per-cache instrumentation, and deterministic workloads spanning KTFS, the cache layer, I/O abstraction, and VirtIO.
 
-`C` `RISC-V Assembly` `Linux` `QEMU` `VirtIO` `Python` `Make` `GitHub Actions`
-
-### [RAE Feature Compression Benchmark](https://github.com/xiaorui7/rae-feature-compression-benchmark)
-
-Config-driven toolkit for compressing high-dimensional vision representations and evaluating quality, storage, and exact-search trade-offs.
-
-- Built a staged, resumable CLI that extracts pooled features from the official frozen RAE Stage-1 model, then evaluates FP16 storage, PCA, and trainable linear adapters.
-- Implemented exact block-wise cosine search, logistic-probe and reconstruction evaluation, validation-only selection, and held-out test auditing.
-- Added content-addressed runs, atomic artifacts, manifest validation, provenance hashes, deterministic sample handling, reports, tests, and CPU CI. The upstream RAE model and weights remain external components.
-
-`Python` `PyTorch` `NumPy` `scikit-learn` `matplotlib` `pytest`
+`C` `Linux` `QEMU` `VirtIO` `Python` `Make` `GitHub Actions`
 
 ### [High-Performance Telemetry Processing Engine](https://github.com/xiaorui7/high-performance-telemetry-engine)
 
